@@ -70,5 +70,5 @@
 
 ## Declaración de uso de IA
 - Herramienta: asistente de IA generativa (Claude).
-- Usos: explicación de conceptos, estructura del repositorio, redacción del protocolo e hipótesis, generación de los notebooks base y apoyo en el análisis.
+- Usos: explicación de conceptos, estructura del repositorio, ayuda generación de los notebooks base.
 - Verificación del grupo: los notebooks fueron ejecutados en Google Colab por el grupo; los resultados provienen de esas ejecuciones.
