@@ -1,0 +1,53 @@
+{
+  "experimento": "E0_baseline",
+  "config": {
+    "seed": 42,
+    "img": 224,
+    "batch": 32,
+    "epochs_max": 10,
+    "epochs_ejecutadas": 10,
+    "optimizador": "Adam",
+    "lr": 0.001
+  },
+  "parametros": 93893,
+  "tamano_mb": 1.18,
+  "tiempo_entrenamiento_min": 2.97,
+  "validacion": {
+    "accuracy": 0.6381,
+    "macro_f1": 0.3062,
+    "f1_por_clase": {
+      "cbb": 0.097,
+      "cbsd": 0.65,
+      "cgm": 0.0,
+      "cmd": 0.7842,
+      "healthy": 0.0
+    },
+    "recall_por_clase": {
+      "cbb": 0.053,
+      "cbsd": 0.7615,
+      "cgm": 0.0,
+      "cmd": 0.9333,
+      "healthy": 0.0
+    },
+    "inferencia_ms_por_imagen": 1.118
+  },
+  "prueba": {
+    "accuracy": 0.6275,
+    "macro_f1": 0.2994,
+    "f1_por_clase": {
+      "cbb": 0.0964,
+      "cbsd": 0.6208,
+      "cgm": 0.0,
+      "cmd": 0.7797,
+      "healthy": 0.0
+    },
+    "recall_por_clase": {
+      "cbb": 0.0519,
+      "cbsd": 0.729,
+      "cgm": 0.0,
+      "cmd": 0.9266,
+      "healthy": 0.0
+    },
+    "inferencia_ms_por_imagen": 1.796
+  }
+}
