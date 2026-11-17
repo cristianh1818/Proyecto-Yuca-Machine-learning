@@ -3,12 +3,13 @@
 Proyecto de la asignatura Aprendizaje Computacional – Ingeniería de Sistemas.
 
 ## Objetivo
-Comparar, bajo un mismo protocolo experimental, modelos preentrenados (MobileNetV2 y ResNet18) frente a un baseline para clasificar enfermedades de la yuca a partir de fotos de hojas, evaluando desempeño por clase (macro-F1), generalización y costo computacional, y analizando el efecto del fine-tuning.
+Comparar, bajo un mismo protocolo experimental, modelos preentrenados (MobileNetV2 y ResNet50V2) frente a un baseline para clasificar enfermedades de la yuca a partir de fotos de hojas, evaluando desempeño por clase (macro-F1), generalización y costo computacional, y analizando el efecto del fine-tuning.
 
 ## Datos
 - Fuente: TensorFlow Datasets – `cassava` (iCassava 2019)
 - 9.430 imágenes, 5 clases: CBB, CBSD, CGM, CMD y hoja sana
 - Particiones oficiales: 5.656 entrenamiento / 1.889 validación / 1.885 prueba
+- Después de quitar duplicados y etiquetas contradictorias: 5.620 / 1.876 / 1.874
 
 ## Experimentos
 | Exp. | Descripción |
@@ -16,7 +17,7 @@ Comparar, bajo un mismo protocolo experimental, modelos preentrenados (MobileNet
 | E0 | Baseline: CNN pequeña |
 | E1 | MobileNetV2 congelado (feature extraction) |
 | E2 | MobileNetV2 con fine-tuning del último bloque |
-| E3 | ResNet18 congelado, mismo protocolo que E1 |
+| E3 | ResNet50V2 congelado, mismo protocolo que E1 |
 | Extra | Augmentation en entrenamiento o robustez ante brillo |
 
 Métrica principal: **macro-F1**. También se reportan accuracy, F1 y recall por clase, matriz de confusión, tiempo de entrenamiento, tiempo de inferencia y tamaño del modelo.
@@ -26,6 +27,8 @@ Métrica principal: **macro-F1**. También se reportan accuracy, F1 y recall por
 - `results/` – métricas, matrices de confusión y gráficas
 - `protocolo.md` – protocolo experimental e hipótesis
 - `bitacora.md` – registro fechado de decisiones
+- `analisis_E0.md` y `analisis_E1.md` – análisis de resultados
+- `registro_errores.md` – errores revisados
 - `requirements.txt` – dependencias
 
 ## Ejecución
