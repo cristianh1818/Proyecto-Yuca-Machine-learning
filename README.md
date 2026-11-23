@@ -36,6 +36,14 @@ Métrica principal: **macro-F1**. También se reportan accuracy, F1 y recall por
 2. Instalar las dependencias: `pip install -r requirements.txt`
 3. Ejecutar las celdas en orden. Semilla fija: 42.
 
+
+## 2026-11-22 — Planificación de E2
+- Problema: definir cómo hacer el fine-tuning sin romper la comparación con E1.
+- Alternativas: descongelar todo MobileNetV2 / descongelar solo el último bloque.
+- Decisión: descongelar solo el último bloque, partiendo de los pesos de E1, con learning rate 1e-5.
+- Motivo: con ≈5.600 imágenes, descongelar toda la red tiene alto riesgo de sobreajuste; un learning rate bajo evita borrar lo aprendido en ImageNet.
+- Próximo paso: implementar E2 con el mismo protocolo (semilla 42, 224×224, máx. 10 épocas, EarlyStopping) y comparar contra E1.
+
 ## Integrantes
 - Cristian Herrera Mendez
 - Kevin Vega Machado
