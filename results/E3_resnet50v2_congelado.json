@@ -1,0 +1,55 @@
+{
+  "experimento": "E3_resnet50v2_congelado",
+  "config": {
+    "seed": 42,
+    "img": 224,
+    "batch": 32,
+    "epochs_max": 10,
+    "epochs_ejecutadas": 9,
+    "optimizador": "Adam",
+    "lr": 0.001,
+    "backbone": "ResNet50V2 (ImageNet), congelado"
+  },
+  "parametros": 23575045,
+  "parametros_entrenables": 10245,
+  "tamano_mb": 95.07,
+  "tiempo_entrenamiento_min": 3.89,
+  "validacion": {
+    "accuracy": 0.7596,
+    "macro_f1": 0.6521,
+    "f1_por_clase": {
+      "cbb": 0.4055,
+      "cbsd": 0.734,
+      "cgm": 0.6143,
+      "cmd": 0.8611,
+      "healthy": 0.6457
+    },
+    "recall_por_clase": {
+      "cbb": 0.2914,
+      "cbsd": 0.7678,
+      "cgm": 0.5175,
+      "cmd": 0.9152,
+      "healthy": 0.6792
+    },
+    "inferencia_ms_por_imagen": 6.128
+  },
+  "prueba": {
+    "accuracy": 0.7567,
+    "macro_f1": 0.631,
+    "f1_por_clase": {
+      "cbb": 0.3551,
+      "cbsd": 0.7589,
+      "cgm": 0.5812,
+      "cmd": 0.8608,
+      "healthy": 0.5991
+    },
+    "recall_por_clase": {
+      "cbb": 0.2468,
+      "cbsd": 0.8067,
+      "cgm": 0.502,
+      "cmd": 0.9074,
+      "healthy": 0.619
+    },
+    "inferencia_ms_por_imagen": 11.854
+  }
+}
