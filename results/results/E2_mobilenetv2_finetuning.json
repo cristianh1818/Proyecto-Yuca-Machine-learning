@@ -1,0 +1,55 @@
+{
+  "experimento": "E2_mobilenetv2_finetuning",
+  "config": {
+    "seed": 42,
+    "img": 224,
+    "batch": 32,
+    "epochs_max": 10,
+    "epochs_ejecutadas": 10,
+    "optimizador": "Adam",
+    "lr": 1e-05,
+    "backbone": "MobileNetV2 (ImageNet), fine-tuning de block_16 y Conv_1 desde E1; BN congelada"
+  },
+  "parametros": 2264389,
+  "parametros_entrenables": 885445,
+  "tamano_mb": 16.73,
+  "tiempo_entrenamiento_min": 2.77,
+  "validacion": {
+    "accuracy": 0.799,
+    "macro_f1": 0.7183,
+    "f1_por_clase": {
+      "cbb": 0.5224,
+      "cbsd": 0.78,
+      "cgm": 0.6994,
+      "cmd": 0.8868,
+      "healthy": 0.703
+    },
+    "recall_por_clase": {
+      "cbb": 0.4238,
+      "cbsd": 0.8494,
+      "cgm": 0.6654,
+      "cmd": 0.8903,
+      "healthy": 0.6698
+    },
+    "inferencia_ms_por_imagen": 4.866
+  },
+  "prueba": {
+    "accuracy": 0.7972,
+    "macro_f1": 0.7232,
+    "f1_por_clase": {
+      "cbb": 0.5296,
+      "cbsd": 0.7706,
+      "cgm": 0.7059,
+      "cmd": 0.8854,
+      "healthy": 0.7246
+    },
+    "recall_por_clase": {
+      "cbb": 0.4351,
+      "cbsd": 0.8361,
+      "cgm": 0.6877,
+      "cmd": 0.8804,
+      "healthy": 0.7143
+    },
+    "inferencia_ms_por_imagen": 8.854
+  }
+}
