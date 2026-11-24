@@ -1,0 +1,12 @@
+tensorflow
+tensorflow-datasets
+importlib_resources
+numpy
+pandas
+matplotlib
+scikit-learn
+scipy
+requests
+tabulate
+# opcional, solo para la fuente Kaggle 2020 del notebook 07
+kaggle
