@@ -1,0 +1,55 @@
+{
+  "experimento": "E1_augmentation",
+  "config": {
+    "seed": 42,
+    "img": 224,
+    "batch": 32,
+    "epochs_max": 10,
+    "epochs_ejecutadas": 10,
+    "optimizador": "Adam",
+    "lr": 0.001,
+    "backbone": "MobileNetV2 (ImageNet), congelado + RandomFlip(h,v) + RandomRotation(0.05) solo en entrenamiento"
+  },
+  "parametros": 2264389,
+  "parametros_entrenables": 6405,
+  "tamano_mb": 9.7,
+  "tiempo_entrenamiento_min": 3.3,
+  "validacion": {
+    "accuracy": 0.7671,
+    "macro_f1": 0.6729,
+    "f1_por_clase": {
+      "cbb": 0.4533,
+      "cbsd": 0.7441,
+      "cgm": 0.6491,
+      "cmd": 0.8646,
+      "healthy": 0.6531
+    },
+    "recall_por_clase": {
+      "cbb": 0.3377,
+      "cbsd": 0.7971,
+      "cgm": 0.5759,
+      "cmd": 0.8812,
+      "healthy": 0.7547
+    },
+    "inferencia_ms_por_imagen": 2.812
+  },
+  "prueba": {
+    "accuracy": 0.7711,
+    "macro_f1": 0.6673,
+    "f1_por_clase": {
+      "cbb": 0.4167,
+      "cbsd": 0.7531,
+      "cgm": 0.6667,
+      "cmd": 0.871,
+      "healthy": 0.6292
+    },
+    "recall_por_clase": {
+      "cbb": 0.2922,
+      "cbsd": 0.8172,
+      "cgm": 0.581,
+      "cmd": 0.8804,
+      "healthy": 0.8
+    },
+    "inferencia_ms_por_imagen": 2.249
+  }
+}
